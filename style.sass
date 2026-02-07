@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap')
+
+$phoneSize: 768px
+
+html
+    overscroll-behavior: none
+
+    body
+        background-image: url("./assets/background.jpg")
+        background-size: 1000px 1000px
+        background-repeat: repeat
+        font-family: "Finger Paint", sans-serif
+
+        .hyper-link
+            color: blue
+            text-decoration: none
+            &:hover
+                color: darkblue
+
+        .container
+            @media (min-width: $phoneSize)
+                max-width: $phoneSize - 32px
+                margin: 32px auto
+            @media (max-width: $phoneSize)
+                margin: 16px
+
+        #header-container
+            @media (min-width: $phoneSize)
+                transform: rotate(10deg)
+            margin: 64px 32px 64px 32px
+            text-align: center
+
+            h1
+                font-weight: 400
+                font-style: normal
+                font-size: 64px
+                margin: 0
+
+            h2
+                font-weight: 400
+                font-style: normal
+                font-size: 32px
+                margin: 0
+
+            #header-image
+                max-width: 300px
+                width: calc(100vw - 84px)
+                height: auto
+                @media (min-width: $phoneSize)
+                    transform: rotate(-20deg)
+                margin-top: 24px
+
+        #about-container
+
+            h3
+                font-size: 32px
+                margin: 16px 0
+
+            p
+                font-size: 24px
+
+            .about-section-container
+                display: grid
+
+                @media (min-width: $phoneSize)
+                    grid-template-columns: auto auto
+                    grid-gap: 32px
+                @media (max-width: $phoneSize)
+                    grid-template-columns: auto
+
+            #owen-young-computer-img
+                @media (min-width: $phoneSize)
+                    height: 400px
+                    width: 300px
+                @media (max-width: $phoneSize)
+                    width: 80vw
+                    margin-left: calc(100vw * -0.04)
+
+            #owen-yearbook-img
+                @media (min-width: $phoneSize)
+                    height: 300px
+                    width: 400px
+                @media (max-width: $phoneSize)
+                    width: calc(100vw - 32px)
+                    margin-left: calc(100vw * -0.08)
+
+            #owen-computer-view-img
+                @media (min-width: $phoneSize)
+                    margin: 16px auto
+                    height: 300px
+                    width: 500px
+                @media (max-width: $phoneSize)
+                    margin: 8px 0
+                    width: calc(100vw - 32px)
+                    height: auto
+                    margin-left: calc(100vw * -0.048)
+
+        #side-project-container
+
+            h3
+                font-size: 32px
+
+            ul
+                li
+                    font-size: 24px
+
+        #connect-container
+
+            h3
+                font-size: 32px
+
+            ul
+                display: flex
+                flex-wrap: wrap
+                padding: 0
+                justify-content: space-around
+
+                li
+                    list-style-type: none
+
+                    img
+                        max-width: 256px
+                        width: calc(100vw - 84px)
+                        height: auto
+                        margin: 16px
+
+        footer
+            font-size: 16px
+            margin: 80px auto 24px auto
+            display: flex
+            justify-content: center
+
+            ul
+                padding: 0
+
+                li
+                    list-style-type: none
+                    text-align: center
